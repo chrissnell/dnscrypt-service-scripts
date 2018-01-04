@@ -1,0 +1,8 @@
+# /usr/lib/systemd/system/dnscrypt-key-rotate.service
+[Unit]
+Description=dnscrypt-wrapper key rotation
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/dnscrypt-key-rotate.sh
+TimeoutStartSec=10
