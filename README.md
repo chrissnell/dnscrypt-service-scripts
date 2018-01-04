@@ -16,6 +16,8 @@ cp *.timer /usr/liib/systemd/system/
 systemctl daemon-reload
 systemctl enable dnscrypt-server-rotate.timer
 systemctl start dnscrypt-server-rotate.timer
+systemctl enable dnscrypt-wrapper@a.service
+systemctl start dnscrypt-wrapper@a.service
 # Test rotation and re-keying manually
 /usr/local/bin/dnscrypt-server-rotate.sh
 ```
